@@ -10,14 +10,14 @@ import array
 from bluez_components import *
 
 class RandomNumberService(Service):
-    RANDOM_NUMBER_SVC_UUID = '12345678-1234-5678-1234-56789abcdef0'
+    RANDOM_NUMBER_SVC_UUID = 'fff0'
 
     def __init__(self, bus, index):
         Service.__init__(self, bus, index, self.RANDOM_NUMBER_SVC_UUID, True)
         self.add_characteristic(RandomNumberCharacteristic(bus, 0, self))
 
 class RandomNumberCharacteristic(Characteristic):
-    RANDOM_NUMBER_CHRC_UUID = '12345678-1234-5678-1234-56789abcdef1'
+    RANDOM_NUMBER_CHRC_UUID = 'fff1'
 
     def __init__(self, bus, index, service):
         Characteristic.__init__(

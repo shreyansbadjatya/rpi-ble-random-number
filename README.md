@@ -225,7 +225,7 @@ curl -k --location 'https://[SERVER]/control/registration/registerTopic' \
 > [!CAUTION]
 > Use correct name of the [ControlApplication]
 
-# 4. Subscribe to Notification
+# 5. Subscribe to Notification
 
 This API call is used to subscribe to notification data from BLE
 
@@ -265,7 +265,7 @@ curl -k --location 'https://[SERVER]:8081/control/data/subscribe' \
 
 
 
-# 5. Reading Data via MQTT
+# 6. Reading Data via MQTT
 ```shell
 mosquitto_sub -h [SERVER] -p 41883 -t [rpi/ble/randomnumber] -u [DataApplication] --pw [API_KEY]
 ```
